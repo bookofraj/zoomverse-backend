@@ -55,7 +55,8 @@ public class UserService {
         }
     }
 
-    public ResponseEntity<ApiResponse<User>> getUserByUserId(String userId) throws ExecutionException, InterruptedException {
+    public ResponseEntity<ApiResponse<User>> getUserByUserId(String userId) 
+            throws ExecutionException, InterruptedException {
         logger.info("inside user controller getUser() by user id method");
 
         try {

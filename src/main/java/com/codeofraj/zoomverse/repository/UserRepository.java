@@ -33,6 +33,8 @@ public class UserRepository {
 
     public User createUser(String email, String password, String username)
             throws ExecutionException, InterruptedException {
+        
+        logger.info("inside user repository createUser() method");
 
         List<QueryDocumentSnapshot> documents = db.collection(COLLECTION_NAME)
                                                     .whereEqualTo("email", email).get()
